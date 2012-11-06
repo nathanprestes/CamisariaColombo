@@ -7,4 +7,16 @@ $(document).ready(function() {
 			$(this).addClass("hoverMenu");
 		}
 	});
+	
+	if($('#menu h3').length != 0){
+		$('#menu h3').each(function(){
+			$(this).after('<div class="separator"></div>');
+		});
+	};
+	
+	if($('#menu01').length != 0){
+		$('#menu01 li').each(function(){
+			$(this).after('<div class="separator"></div>');
+		});
+	};
 });

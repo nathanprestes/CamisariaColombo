@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+<head>
+<title>Loja Modelo</title>
+<vtex:metaTags/>
+<link rel="stylesheet" type="text/css" href="~/arquivos/general.css" />
+<script type="text/javascript" src="~/arquivos/menu.js"></script>
+<!--  SubTemplate: pngIeFix -->
+<vtex:template id="pngIeFix" />
+<!-- /SubTemplate: pngIeFix -->
+</head>
+
+<body>
+<div id="all">
+	<vtex:template id="header" />
+	<div id="topBanners">
+		<!--  placeholders -->
+		<div id="banner1"><vtex:contentPlaceHolder id="PHbanner1" /></div>
+		<div id="banner2"><vtex:contentPlaceHolder id="PHbanner2" /></div>
+		<div id="banner3"><vtex:contentPlaceHolder id="PHbanner3" /></div>
+		<!-- /placeholders -->
+		<div id="topNewsletter">
+			<!--  Controle: Newsletter -->	
+			<vtex.cmc:newsletterOptIn />
+			<!-- /Controle: Newsletter -->	
+		</div>
+	</div>
+	<div id="brands">
+		<!--  SubTemplate: brands -->
+		<vtex:template id="brands" />
+		<!-- /SubTemplate: brands -->
+	</div>
+	<div id="content">
+		<div id="collections">
+			<!--  placeholders -->
+			<div class="collectionWrap"><vtex:contentPlaceHolder id="PHcollection1" /></div>
+			<!-- /placeholders -->
+		</div>
+		<div id="bottomBanners">
+			<!--  placeholders -->
+			<div id="bannerBottom1"><vtex:contentPlaceHolder id="PHbannerBottom1" /></div>
+			<div id="bannerBottom2"><vtex:contentPlaceHolder id="PHbannerBottom2" /></div>
+			<!-- /placeholders -->
+		</div>
+	</div>
+	<div id="sideBar">
+		<div id="vipClub" class="sideBarItem">
+			<h2>Participe</h2>
+			<!--  placeholder -->
+			<div id="banner6"><vtex:contentPlaceHolder id="PHbanner6" /></div>
+			<!-- /placeholder -->
+		</div>
+		<div id="bestSellers" class="sideBarItem">
+			<!--  placeholder -->
+			<div id="homeCollection5"><vtex:contentPlaceHolder id="PHbestsellers" /></div>
+			<!-- /placeholder -->
+		</div>
+		
+		<!--  SubTemplate: hotsites -->
+		<vtex:template id="hotsites" />
+		<!-- /SubTemplate: hotsites -->
+		
+		<div class="sideBarItem linkList">
+			<h2>Navegue</h2>
+			<!--  Controle: links de departamento -->
+			<vtex.cmc:departmentLinks />
+			<!-- /Controle: links de departamento -->
+		</div>
+	</div>
+	<!--  SubTemplate: footer -->
+	<vtex:template id="footer" />
+	<!-- /SubTemplate: footer -->
+</div>
+
+</body>
+</html>
