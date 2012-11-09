@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+<head>
+<title>Loja Modelo</title>
+<vtex:metaTags/>
+<link rel="stylesheet" type="text/css" href="~/arquivos/general.css" />
+<link rel="stylesheet" type="text/css" href="~/arquivos/product.css" />
+<link rel="stylesheet" type="text/css" href="~/arquivos/thickbox.css" />
+<script type="text/javascript" src="~/arquivos/menu.js"></script>
+<vtex:template id="pngIeFix" />
+<script type="text/javascript">
+    $(document).ready(function(){
+		$('li.descricao').click(function(){
+			$(this).addClass('activeTab');
+			$('.productDescription').css('display', 'block');
+			$('td.Composicao').css('display', 'none');
+			$('li.composicao').removeClass('activeTab');
+			$('td.Cuidados-Necessarios').css('display', 'none');
+			$('li.cuidados').removeClass('activeTab');
+			$('td.Vantagens').css('display', 'none');
+			$('li.vantagens').removeClass('activeTab');
+		});
+
+		$('li.composicao').click(function(){
+			$(this).addClass('activeTab');
+			$('td.Composicao').css('display', 'block');
+			$('.productDescription').css('display', 'none');
+			$('li.descricao').removeClass('activeTab');
+			$('td.Cuidados-Necessarios').css('display', 'none');
+			$('li.cuidados').removeClass('activeTab');
+			$('td.Vantagens').css('display', 'none');
+			$('li.vantagens').removeClass('activeTab');
+		});
+
+		$('li.cuidados').click(function(){
+			$(this).addClass('activeTab');
+			$('td.Cuidados-Necessarios').css('display', 'block');
+			$('td.Composicao').css('display', 'none');
+			$('li.composicao').removeClass('activeTab');
+			$('.productDescription').css('display', 'none');
+			$('li.descricao').removeClass('activeTab');
+			$('td.Vantagens').css('display', 'none');
+			$('li.vantagens').removeClass('activeTab');
+		});
+
+		$('li.vantagens').click(function(){
+			$(this).addClass('activeTab');
+			$('td.Vantagens').css('display', 'block');
+			$('td.Composicao').css('display', 'none');
+			$('li.composicao').removeClass('activeTab');
+			$('td.Cuidados-Necessarios').css('display', 'none');
+			$('li.cuidados').removeClass('activeTab');
+			$('.productDescription').css('display', 'none');
+			$('li.descricao').removeClass('activeTab');
+		});
+	});
+</script>
+</head>
+
+<body id="produto">
+
+<vtex:contentPlaceHolder id="facebookAPI" />
+
+<div id="all">
+    <vtex:template id="header" />
+    <div id="regua"></div>
+	<div id="sideBar">
+		<vtex.cmc:ProductImage />
+		<div id="redes_sociais">
+			<a href="" id="social_face"></a>
+			<a href="" id="social_twitter"></a>
+			<a href="" id="social_orkut"></a>
+		</div>
+	</div>
+	
+	<div id="content">
+		<h1><vtex.cmc:productName /></h1>
+        <div id="productReference"><span>Cód. do produto: </span><vtex.cmc:skuReference/></div>
+        <div id="faceLike"><div class="fb-like" data-send="false" data-width="450" data-show-faces="true"></div></div>
+		<div id="productPrice"><vtex.cmc:skuPrice /></div>
+		<div id="skuSelector">
+			<vtex.cmc:skuRichSelection changeImage="1" />
+		</div>
+		<div id="buyButton">
+			<vtex.cmc:BuyButton />
+		</div>
+	</div>	
+	
+	<div id="content_bottom">
+		<div id="productDescription">
+			<h2 class="title">Descrição do Produto</h2>
+			<ul class="abas_descricao">
+				<li class="descricao activeTab">DESCRIÇÃO</li>
+				<li class="composicao">COMPOSIÇÃO</li>
+				<li class="cuidados">CUIDADOS NECESSÁRIOS</li>
+				<li class="vantagens last">VANTAGENS</li>
+			</ul>
+			<vtex.cmc:ProductDescription />
+		</div>
+		<div id="productEspecification">
+			<h2 class="title">Especificação do Produto</h2>
+			<vtex.cmc:productSpecification />	
+		</div>
+		
+		<vtex.cmc:BuyTogether/>	
+		
+		<vtex.cmc:UserReview />
+	</div>
+
+	<vtex:template id="footer" />
+</div>
+
+</body>
+</html>

@@ -234,7 +234,7 @@ h1#title a, .header-steps h1 a{background: url(/arquivos/sprite.png) no-repeat -
 .categoria #content #breadCrumbs ul li a:hover, .departamento #content #breadCrumbs ul li a:hover, .resultado-busca #content #breadCrumbs ul li a:hover{text-decoration:underline;}
 
 .departamento #content, .categoria #content, .resultado-busca #content{overflow:hidden;}
-.categoria #content #collections, .departamento #content #collections, .resultado-busca #content #collections{position: relative;width: 100%;}
+.categoria #content #collections, .departamento #content #collections, .resultado-busca #content #collections{position: relative;width: 100%;float: left;}
 .categoria #content .searchResultsTime, .departamento #content .searchResultsTime, .resultado-busca #content .searchResultsTime{clear: both;color: #544B35;float: left;font-size: 15px;margin-left: 21px;}
 .departamento .searchResultsTime span, .categoria .searchResultsTime span, .resultado-busca .searchResultsTime span, .departamento p.compare, .categoria p.compare, .resultado-busca p.compare{display: none;}
 .departamento #content .sub, .categoria #content .sub, .resultado-busca #content .sub{overflow: hidden;}
